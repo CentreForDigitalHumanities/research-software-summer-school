@@ -1,0 +1,14 @@
+# uv
+.venv/
+.uv/
+
+# mkdocs
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
