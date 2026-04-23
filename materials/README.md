@@ -16,7 +16,7 @@ uvx --with mkdocs-material mkdocs build
 
 ## CI/CD
 The website is automatically built and deployed the repositoriy GitHub page. See [the workflow file](../.github/workflows/ci.yml) for details.
-View the built site at 
+View the built site at [the GitHub pages adress][pages].
 
 ## Theming
 For now, the website is generated using the default *material* theme by [mkdocs-material][mkdocs-material]. See documentation on customization.
@@ -25,4 +25,4 @@ For now, the website is generated using the default *material* theme by [mkdocs-
 [mkdocs]: https://www.mkdocs.org/
 [mkdocs-material]: https://squidfunk.github.io/mkdocs-material/
 [uv]: https://docs.astral.sh/uv/
-[page]: centrefordigitalhumanities.github.io/research-software-summer-school
+[pages]: centrefordigitalhumanities.github.io/research-software-summer-school
