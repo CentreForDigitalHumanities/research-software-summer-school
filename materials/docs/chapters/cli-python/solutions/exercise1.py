@@ -7,7 +7,7 @@ def main():
     # The program expects exactly two arguments
     # Note that you could choose to accept more than two numbers, and add all of them together
     if len(arguments) != 2:
-        print(f"Usage: {program_name} <number1> <number2>")
+        print(f"Usage: python {program_name} <number1> <number2>")
         sys.exit(1)
 
     # Arguments are passed as strings, we need to convert them to integers
