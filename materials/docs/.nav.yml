@@ -1,4 +1,5 @@
 nav:
   - index.md
+  - chapters/cli-python
 
 append_unmatched: false
