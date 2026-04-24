@@ -4,7 +4,7 @@ When running a program from a command line interface (CLI), that program may acc
 - `ls` displays the contents of the current directory
 - `ls /path/to/directory` displays the content of `/path/to/directory`
 - `ls -l` displays the content of the current directory in long format
-- `ls` accepts many more arguments. Use `man ls` to get an overview.
+- `ls` accepts many more arguments. Use `man ls` to get an overview, or look it up in the [documentation](https://man7.org/linux/man-pages/man1/ls.1.html).
 
 Python programs are no exception to this, and will actually take an arbitrary number of CLI arguments. It is up to the program to do something with those arguments.
 
