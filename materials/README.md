@@ -25,4 +25,4 @@ For now, the website is generated using the default *material* theme by [mkdocs-
 [mkdocs]: https://www.mkdocs.org/
 [mkdocs-material]: https://squidfunk.github.io/mkdocs-material/
 [uv]: https://docs.astral.sh/uv/
-[pages]: centrefordigitalhumanities.github.io/research-software-summer-school
+[pages]: https://centrefordigitalhumanities.github.io/research-software-summer-school
