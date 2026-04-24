@@ -1,6 +1,7 @@
 site_name: Research Software Summer School
 repo_url: https://github.com/CentreForDigitalFumanities/research-software-summer-school
-
+plugins:
+  - awesome-nav
 
 # styling
 theme:

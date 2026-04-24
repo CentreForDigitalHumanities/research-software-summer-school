@@ -3,15 +3,19 @@ This directory contains the materials in MarkDown format, and the infrastructure
 
 ## Installation
 - Install [uv][uv] package and project manager
+- Install the mkdocs tool through uv:
+```
+uv tool install --with mkdocs-material --with mkdocs-awesome-nav  mkdocs
+```
 
 ## Usage
 To serve a local version of the website:
 ```
-uvx --with mkdocs-material mkdocs serve --livereload
+mkdocs serve --livereload
 ```
 To generate a new version of the website:
 ```
-uvx --with mkdocs-material mkdocs build
+mkdocs build
 ```
 
 ## CI/CD
