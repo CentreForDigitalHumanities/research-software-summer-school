@@ -19,13 +19,13 @@ print('The result is: {}'.format(result))
 
 And execute it:
 
-```
+```shell
 python add.py
 ```
 
 If we want to add two different numbers, we would need to change the script. This is not very flexible. Ideally, we would provide the numbers that we want to add:
 
-```
+```shell
 python add.py 4 5
 ```
 
