@@ -1,5 +1,6 @@
 nav:
   - index.md
   - chapters/cli-python
+  - chapters/day-2/software-dependencies.md
 
 append_unmatched: false
