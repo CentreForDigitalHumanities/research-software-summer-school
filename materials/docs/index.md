@@ -1,5 +1,10 @@
 ## Programme (internal use)
 
+### Homework
+- basic cli
+- IDE/VSCode
+- GenAI disclaimer
+
 ### Monday June 29th
 - git
 - requirements & virtual environments
