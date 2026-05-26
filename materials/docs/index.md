@@ -1,17 +1,25 @@
-# Welcome to MkDocs
+## Programme (internal use)
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+### Monday June 29th
+- git
+- requirements & virtual environments
 
-## Commands
+### Tuesdag June 30th
+- reusable code
+- git flow
+- open source
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### Wednesday July 1st
+- operationalization
+- data school talk & discussion
+- life of a programming scientist
+- hands-on work
 
-## Project layout
+### Thursday July 2nd
+- web scraping
+- open data
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### Friday July 3rd
+- testing
+- viz
+- presentations
