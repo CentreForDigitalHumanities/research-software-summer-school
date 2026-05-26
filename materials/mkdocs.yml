@@ -18,7 +18,8 @@ markdown_extensions:
   - pymdownx.blocks.caption
   - pymdownx.blocks.definition
   - pymdownx.blocks.details
-  - pymdownx.blocks.tab
+  - pymdownx.blocks.tab:
+      alternate_style: true
 
 # styling
 theme:
