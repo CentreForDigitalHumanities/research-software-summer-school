@@ -1,5 +1,10 @@
 nav:
   - index.md
-  - chapters/cli-python
+  - day-1
+  - day-2
+  - day-3
+  - day-4
+  - day-5
+  - example_file_with_extensions.md
 
 append_unmatched: false
