@@ -14,7 +14,7 @@ You should have already created a Github account and installed VSCode (or anothe
 ///
 
 ## Version Control using Git
-*Version Control* is one of the fundamental concepts in creating software. But what is “version control”, and why should you care? 
+*Version Control* is one of the fundamental concepts in creating software. But what is version control, and why should you care? 
 
 /// define
 Version control
@@ -45,17 +45,9 @@ Commit
 [XKCD about commits](https://xkcd.com/1296/)
 ///
 
-## Exercise: create a sandbox repository on your own machine
+## Exercise: Create a repository
+Create a sandbox repository on your own machine. You will use this repository to practice Git commands and have a playground where you can try anything you like. 
 
-/// tab | Using the command line
-
- - Step 1: Create a directory called `sandbox_NAME` (replace NAME with your own name)
- - Step 2: Run `git init` in this directory using the terminal: this will automatically create a repository in a subdirectory called `.git`, which you can see if you run `ls -A`.
- - Step 3: Create a file called `glossary.md` (a [Markdown](https://www.markdownguide.org/) file), which you can use to write down new terms that you have learned during this course with their definitions. Add at least one term and its definition/explanation.
- - Step 4: Add the file to the staging area: `git add glossary.md`.
- - Step 5: Commit the new file: `git commit -m "<YOUR MESSAGE HERE>"`.
- - Step 6: Check the commit history to confirm that it worked: `git log`
-///
 
 /// tab | Using the VSCode Git plugin
 
@@ -65,6 +57,16 @@ Commit
  - Step 4: Add the file to the staging area by clicking the `+` symbol next to the filename in the Source Control tab. ![git-stage-changes](../../assets/git_stage_changes.png)
  - Step 5: Commit the new file after typing a message into the text box.
  - Step 6: Check the commit history to confirm that it worked by selecting the Source Control Graph (at the bottom of the Source Control tab) ![git-log](../../assets/git_log.png)
+///
+
+/// tab | Using the command line
+
+ - Step 1: Create a directory called `sandbox_NAME` (replace NAME with your own name)
+ - Step 2: Run `git init` in this directory using the terminal: this will automatically create a repository in a subdirectory called `.git`, which you can see if you run `ls -A`.
+ - Step 3: Create a file called `glossary.md` (a [Markdown](https://www.markdownguide.org/) file), which you can use to write down new terms that you have learned during this course with their definitions. Add at least one term and its definition/explanation.
+ - Step 4: Add the file to the staging area: `git add glossary.md`
+ - Step 5: Commit the new file: `git commit -m "<YOUR MESSAGE HERE>"`
+ - Step 6: Check the commit history to confirm that it worked: `git log`
 ///
 
 
