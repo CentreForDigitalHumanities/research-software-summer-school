@@ -101,7 +101,7 @@ Create a new branch on which you will add some more terms to the glossary.
  - Step 6: Switch back to the `main` branch using the branch selector.
  - Step 7: Open the Source Control menu (`...`) and select **Merge Branch...**. Choose `feature/add-entries`. ![git-merge](../../assets/git_merge.png)
  - Step 8: Verify that the new glossary entries are now visible on the `main` branch.
- - Step 9: Delete the feature branch using the branch management menu once the merge has completed. 
+ - Step 9: Delete the feature branch using the branch management menu once the merge has completed. You must stay on the `main` branch to do this.
  
 ////
 //// tab | Using the command line
@@ -123,14 +123,6 @@ Don't worry about accidentally deleting an active branch: Git has a security bar
 ///
 ////
 
-
-
-
-
-## Repository basics
-### README
-
-### License
 
 ## Works cited:
 https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
