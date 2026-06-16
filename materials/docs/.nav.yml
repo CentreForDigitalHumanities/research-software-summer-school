@@ -1,5 +1,5 @@
 nav:
   - index.md
-  - chapters/cli-python
+  - preparation
 
 append_unmatched: false
