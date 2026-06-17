@@ -1,7 +1,19 @@
+# metadata
 site_name: Research Software Summer School
 repo_url: https://github.com/CentreForDigitalFumanities/research-software-summer-school
+
+# markdown options
 plugins:
   - awesome-nav
+  
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 # styling
 theme:
@@ -11,6 +23,8 @@ theme:
     accent: custom
   font:
     text: Open Sans
+  features:
+    - content.code.copy
   logo: assets/cdh_avatar.jpg
 extra_css:
   - stylesheets/extra.css

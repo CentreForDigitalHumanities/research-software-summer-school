@@ -1,0 +1,5 @@
+title: Command line arguments in Python
+
+nav:
+  - Command line arguments: cli.md
+  - The argparse library: argparse.md
