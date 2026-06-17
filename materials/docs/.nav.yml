@@ -1,5 +1,6 @@
 nav:
-  - index.md
-  - chapters/cli-python
+  - Home: index.md
+  - preparation
+  - Practical information: practical.md
 
 append_unmatched: false
