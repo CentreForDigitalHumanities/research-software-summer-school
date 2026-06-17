@@ -1,0 +1,7 @@
+title: Preparation and installation instructions
+
+nav:
+  - Overview: index.md
+  - Integrated Development Environment (IDE): 1 - IDE.md
+  - Python in VS Code: 2 - VS Code.md
+  - Working with the Shell: 3 - Shell.md
