@@ -52,7 +52,7 @@ Create a sandbox repository on your own machine. You will use this repository to
 /// tab | Using the VSCode Git plugin
 
  - Step 1: Step 1: Create a directory called sandbox_NAME (replace NAME with your own name). Open this directory using VSCode (`Open Folder...`).
- - Step 2: In the Source Control tab (to the left), select 'Initialize Repository', this will automatically create a repository in a subdirectory called `.git`, which you can see if you run `ls -A` in the terminal or in the Explorer tab.  ![git-init](../../assets/git_init.png)
+ - Step 2: In the Source Control tab (to the left), select 'Initialize Repository', this will automatically create a repository in a subdirectory called `.git`, which you can see if you run `ls -A` in the terminal.  ![git-init](../../assets/git_init.png)
  - Step 3: Create a file called `glossary.md` (a [Markdown](https://www.markdownguide.org/) file), which you can use to write down new terms that you have learned during this course with their definitions. Add at least one term and its definition/explanation.
  - Step 4: Add the file to the staging area by clicking the `+` symbol next to the filename in the Source Control tab. ![git-stage-changes](../../assets/git_stage_changes.png)
  - Step 5: Commit the new file after typing a message into the text box.
