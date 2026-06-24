@@ -63,6 +63,9 @@ You can use `.gitignore` to exclude files from version control. How do you decid
  - *Track source code, not output*. E.g. if you script produces output from some input files, don't commit the output. Instead, provide guidelines on how to produce that output.
  - *Don't track things that are specific to your environment*. The virtual environment is an example of this. Settings for your VS Code is another example. Make sure you provide the steps to *recreate* an environment instead (e.g. `requirements.txt`).
  - **NEVER commit secrets**. Some code requires passwords, API keys, or other secrets. Make sure you do not track these.
+ - Be critical before staging changes. Does the change actually need to be in the source code repository?
+
+ See [the GitHub example `.gitignore`](https://github.com/github/gitignore/blob/main/Python.gitignore) for entries and explanations for common Python exlusions.
 ///
 
 ## Exercise: ignore a virtual environment
