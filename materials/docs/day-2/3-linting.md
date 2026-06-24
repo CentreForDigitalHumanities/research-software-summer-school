@@ -2,7 +2,7 @@
 
 
 
-## Callenge: Improve Your Code (Format & Lint)
+## Challenge: Improve Your Code (Format & Lint)
 
 Install and use a formatter and a linter to improve the style of your code.
 
