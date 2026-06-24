@@ -4,6 +4,7 @@
 
 # mkdocs
 site/
+materials/.cache/
 
 # Python
 __pycache__/
@@ -14,5 +15,7 @@ dist/
 build/
 .env/
 
+# Apple
+.DS_Store
 # mkdocs
 materials/.cache/

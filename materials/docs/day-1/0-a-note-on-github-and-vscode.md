@@ -1,0 +1,4 @@
+## A note on Github and VSCode
+In this course, we use Github and Visual Studio Code. Our reason for picking these two services is their ubiquity; they are by far the most commonly used tools for their respective purposes. Common use means that there are a lot of resources out there to help you figure out these tools, and provide you with the basics that almost everyone in the digital world will be aware of. 
+
+However, both Github and Visual Studio Code are owned by Microsoft, a company that has become increasingly hostile to academics, and you might not want to associate yourself with. Thus, you are free to choose an alternative, like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/) for Github, or [VSCodium](https://vscodium.com/) for VSCode, an open-source fork of the binaries of VSCode.
