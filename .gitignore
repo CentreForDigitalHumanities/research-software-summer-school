@@ -17,3 +17,5 @@ build/
 
 # Apple
 .DS_Store
+# mkdocs
+materials/.cache/
