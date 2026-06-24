@@ -1,30 +1,5 @@
-## Programme (internal use)
+# Beyond Notebooks: Research Software Summer School
+Welcome to the online learning environment for the Research Software Summer School. On this website, all information, materials, additional reading, and anything else you need before, during, and after the summer school will be presented.
 
-### Homework
-- basic cli
-- IDE/VSCode
-- GenAI disclaimer
-
-### Monday June 29th
-- git
-- requirements & virtual environments
-
-### Tuesdag June 30th
-- reusable code
-- git flow
-- open source
-
-### Wednesday July 1st
-- operationalization
-- data school talk & discussion
-- life of a programming scientist
-- hands-on work
-
-### Thursday July 2nd
-- web scraping
-- open data
-
-### Friday July 3rd
-- testing
-- viz
-- presentations
+## Before we start
+Please make sure you read and follow the instructions on the [preparation](./preparation/index.md) page.

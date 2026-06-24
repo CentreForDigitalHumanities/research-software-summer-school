@@ -22,7 +22,9 @@ Version control
 - a system that records changes to a file or set of files over time so that you can recall specific versions later.
 ///
 
-When you have a history of your work, you can always go back to a previous version to restore lost functions, find out where bugs were introduced, and most importantly, blame whoever is at fault. [Git](https://git-scm.com/) is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. Git allows for this by using **commits**, the building blocks of your history. It is primarily used for source code management in software development but it can be used to track changes in files in general - it is particularly effective for tracking text-based files (such as code files). Every change recorded by Git remains part of the project history and can be retrieved at a later date, so even if you make a mistake you can revert to a point before it.
+When you have a history of your work, you can always go back to a previous version to restore lost functions, find out where bugs were introduced, and most importantly, blame whoever is at fault. 
+
+[Git](https://git-scm.com/) is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. Git allows for this by using **commits**, the building blocks of your history. It is primarily used for source code management in software development but it can be used to track changes in files in general - it is particularly effective for tracking text-based files (such as code files). Every change recorded by Git remains part of the project history and can be retrieved at a later date, so even if you make a mistake you can revert to a point before it.
 
 /// define
 Commit
@@ -51,7 +53,7 @@ Create a sandbox repository on your own machine. You will use this repository to
 
 /// tab | Using the VSCode Git plugin
 
- - Step 1: Step 1: Create a directory called sandbox_NAME (replace NAME with your own name). Open this directory using VSCode (`Open Folder...`).
+ - Step 1: Create a directory called `sandbox_NAME` (replace NAME with your own name). Open this directory using VSCode (`Open Folder...`).
  - Step 2: In the Source Control tab (to the left), select 'Initialize Repository', this will automatically create a repository in a subdirectory called `.git`, which you can see if you run `ls -A` in the terminal or in the Explorer tab.  ![git-init](../../assets/git_init.png)
  - Step 3: Create a file called `glossary.md` (a [Markdown](https://www.markdownguide.org/) file), which you can use to write down new terms that you have learned during this course with their definitions. Add at least one term and its definition/explanation.
  - Step 4: Add the file to the staging area by clicking the `+` symbol next to the filename in the Source Control tab. ![git-stage-changes](../../assets/git_stage_changes.png)
