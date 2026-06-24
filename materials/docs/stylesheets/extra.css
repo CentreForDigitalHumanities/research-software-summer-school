@@ -10,3 +10,6 @@
     /* --md-accent-bg-color: ; */
     /* --md-accent-bg-color--light:; */
 }
+.md-content {
+    --md-typeset-a-color: #C00A35;
+}
