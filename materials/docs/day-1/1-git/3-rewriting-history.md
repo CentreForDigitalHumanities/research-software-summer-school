@@ -154,7 +154,7 @@ Avoid using `git rebase` on commits that have already been shared with collabora
  - Step 3: Switch back to `main`.
  - Step 4: Add another glossary term and commit it (`definition three`).
  - Step 5: Switch back to `feature/add-more-definitions`.
- - Step 6: Select **Brach... > Rebase Branch...** from the Source Control menu. ![git-rebase](../../assets/git_rebase.png)
+ - Step 6: Select **Branch... > Rebase Branch...** from the Source Control menu. ![git-rebase](../../assets/git_rebase.png)
  - Step 7: Choose `main` as the branch to rebase onto.
  - Step 8: Resolve merge conflict <--- TODO MAKE TUTORIAL ABOUT IT
  - Step 9: Inspect the Source Control Graph and observe that your feature branch now sits on top of the latest commit from `main`. It should look something like this: ![git-rebased-history](../../assets/git_rebased_history.png)
