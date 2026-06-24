@@ -19,6 +19,8 @@ Branch
 
 By default, most repositories contain a branch called `main` (older repositories may call their main branch `master`). The `main` branch should represent a stable version of the project.
 
+Another branch that is *almost* always present is `develop`. This contains the current development version of the code. Periodically, a new *release* publishes all the changes in `develop` to `main`. Consider `main` the latest stable version, and `develop` the current up-to-date version of the code.
+
 Using branches makes it possible for multiple people to work on the same project simultaneously without interfering with one another's work. It also allows you to work on different features at the same time, although this should be avoided as much as possible, as it is easy to get confused when you have several branches in active development.
 
 /// details | Why use branches?
