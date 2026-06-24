@@ -55,6 +55,15 @@ When Git examines your repository, it will also see the files inside your virtua
 
 The solution for this is the `.gitignore` file, which tells Git which files and directories should not be tracked.
 
+/// details | What should/should not be under version control?
+    type: tip
+
+You can use `.gitignore` to exclude files from version control. How do you decide which files to include? Here's some guidelines:
+
+ - *Track source code, not output*. E.g. if you script produces output from some input files, don't commit the output. Instead, provide guidelines on how to produce that output.
+ - *Don't track things that are specific to your environment*. The virtual environment is an example of this. Settings for your VS Code is another example. Make sure you provide the steps to *recreate* an environment instead (e.g. `requirements.txt`).
+ - **NEVER commit secrets**. Some code requires passwords, API keys, or other secrets. Make sure you do not track these.
+///
 
 ## Exercise: ignore a virtual environment
 
