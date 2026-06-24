@@ -16,4 +16,4 @@ If you want your project to be more thoroughly checked for (computational) repro
 Looking at the repositories that have been [CODECHECKed](https://github.com/codecheckers) or the [Reprohack](https://www.reprohack.org/review/) reviews is another great way to get inspiration to improve the reusability of your own project.
 
 ## Authorship day 2
-This material was created by Eduard Klapwijk and Ole Mussman and is also disclosed via [the Carpentries](https://carpentries-incubator.github.io/reproducible-research-through-reusable-code-in-1-day/aio.html). The memes are added by ME.
+This material was created by Eduard Klapwijk and Ole Mussman and is also disclosed via [the Carpentries](https://carpentries-incubator.github.io/reproducible-research-through-reusable-code-in-1-day/aio.html). The memes are added by Mees van Stiphout.
