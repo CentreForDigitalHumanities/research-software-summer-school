@@ -27,10 +27,14 @@ As mentioned, many APIs will respond with **JSON** data.
 /// define
 JSON
 
-- *JavaScript Object Notation*: a lightweight text format for structured data. It uses key–value pairs and is the most common format for API responses.
+- *JavaScript Object Notation*: a lightweight text format for structured data. It uses key–value pairs and is the most common format for API responses, though other return formats exist.
 ///
 
-JSON is the de-facto standard for communication over HTTP (though other formats exist). 
+
+/// details | HTML responses
+One very common response format is HTML. Note that rendering a website is actually nothing more then making a `GET` request to a server, and getting a HTML file in response. Your browser then renders this HTML as a website.
+We will leverage this fact later on when we scrape the web.
+///
 
 JSON maps very well to Python dictionaries. A single JSON entry looks a lot like a nested Python dictionary:
 
