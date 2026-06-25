@@ -51,7 +51,7 @@ The response always includes a **status code** that tells you whether the reques
  - `5xx` — server error (e.g. `500 Internal Server Error`). This is the servers "fault", something went wrong beyond your control.
 
  /// details | HTTP status codes
-    type: tip
+    type: hint
 - [Wikipedia article on HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 - [Silly one: "HTTP 418: I'm a teapot"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/418)
 ///    
