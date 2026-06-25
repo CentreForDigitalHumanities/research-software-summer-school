@@ -57,6 +57,24 @@ Once packages have been installed into a virtual environment, pip can automatica
  - Inspect the file. Do you see your library in it? What else do you see?
  - Commit the requirements file.
 
+ /// details | Advanced: constraining versions
+Using `pip freeze` constrains all package versions to an *exact* version. This is a good way to ensure all packages work together. However, there are cases where you want to be more or less specific about which versions to use. Following the semantic version convention, you may want to specify only the major version of a package. There are several ways to constrain package versions. Below are the most common ones:
+
+```pip-requirements
+# minimum version, will match any major, minor, or patch above 2.28
+requests>=2.28
+
+# compatible version, will match all patches of 2.0, but not go to 2.1
+pandas~=2.0
+
+# comma separated constraints must all match
+# this will match all versions between 3.0 and 4.0
+# this is a good way to ensure staying within major version
+matplotlib>=3.0,<4.0
+```
+
+ ///
+
 ## Installing from a Requirements File
 A requirements file can be used to recreate an environment on another machine. The `-r` flag tells pip to read package names from a file. We will do that now on one machine, but imagine that you are an exploring researcher stumbling on this new repository that they want to install locally.
 
