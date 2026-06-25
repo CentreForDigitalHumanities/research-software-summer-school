@@ -2,9 +2,8 @@
 ## Objectives
 In this module, you will learn:
 
- - How to send a HTTP request
- - How to use query parameters to filter or customise a request
- - How to read an API response
+ - How to send a HTTP request and receive a response
+ - How to build a request URL and use query parameters
 
 ## Example API: Fruityvice
 - [Fruityvice](https://www.fruityvice.com) is a small open API that returns nutritional information about fruit. It requires no API key.
