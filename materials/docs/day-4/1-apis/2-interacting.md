@@ -2,7 +2,7 @@
 ## Objectives
 In this module, you will learn:
 
- - How to send a HTTP request and receive a response
+ - How to send a HTTP GET request and receive a response
  - How to build a request URL and use query parameters
 
 ## Example API: Fruityvice
@@ -96,7 +96,7 @@ Most APIs let you refine your request by making the url more specific. Let's tak
 
 Request data on all the fruit in the API:
 ```
-https://www.fruityvice.com/api/fruit/
+https://www.fruityvice.com/api/fruit/all/
 ```
 
 Request data on a specific fruit:
@@ -126,6 +126,7 @@ Parameters are separated by `&`. The API documentation will tell you which param
 /// details | How to make the requests
     type: hint
 You can use one of three methods to make `GET` requests:
+
 - Paste the URL in your browser
 - Use `curl <url>` in the command line
 - Use the playground on the Fruityvice website

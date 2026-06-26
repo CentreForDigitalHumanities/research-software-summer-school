@@ -41,7 +41,7 @@ url = "https://www.fruityvice.com/api/fruit/fat?min=5"
 ```
 
 
-- Let requests build the URL for you by supplying a `params` parameter to the request. This is much cleaner.
+- Let requests build the URL for you by supplying a `params` parameter to the request. This is much easier to parse and looks cleaner.
 ```python
 response = requests.get(
     "https://www.fruityvice.com/api/fruit/fat",
@@ -95,6 +95,6 @@ You can copy the code examples above to a new Python file, and modify it.
 /// details | Bonus points
     type: tip
 
- - Be neat and reproducible! Use functions for repeated code, naming conventions, documentation, etc.
+ - Be neat and reproducible! Use functions for repeated code and follow naming conventions.
  - Check in the Python file under version control.
 ///
