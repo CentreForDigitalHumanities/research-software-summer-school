@@ -21,7 +21,7 @@ For the purpose of this course, we will be exploring accessing APIs for the purp
 ## HTTP
 
 *HyperText Transfer Protocol* (HTTP) is the foundation of data exchange on the web. When your code talks to an API, it does so by sending an **HTTP request** and receiving an **HTTP response**.
-In human terms: one persons (the client) asks a question. The other person (the server) answers.
+In human terms: one person (the client) asks a question. The other person (the server) answers.
 
 /// define
 HTTP
@@ -37,7 +37,7 @@ Each request uses a **method** that describes the intended action:
 
 | Method | Meaning |
 |--------|---------|
-| `GET` | Retrieve data|
+| `GET` | Retrieve data / a resource|
 | `POST` | Send data / create a resource |
 | `PUT` / `PATCH` | Update a resource |
 | `DELETE` | Remove a resource |

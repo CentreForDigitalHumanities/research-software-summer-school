@@ -41,7 +41,7 @@ url = "https://www.fruityvice.com/api/fruit/fat?min=5"
 ```
 
 
-- Let requests build the URL for you by supplying a `params` parameter to the request. This is much cleaner.
+- Let requests build the URL for you by supplying a `params` parameter to the request. This is much easier to parse and looks cleaner.
 ```python
 response = requests.get(
     "https://www.fruityvice.com/api/fruit/fat",
