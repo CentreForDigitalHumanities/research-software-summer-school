@@ -11,12 +11,12 @@ In-code documentation makes code more understandable and explains decisions we m
 ```python
 # convert from degrees celsius to fahrenheit
 def convert(d):
-    return d * 5 / 9 + 32
+    return d * 9 / 5 + 32
 ```
 vs
 ```python
 def celsius_to_fahrenheit(degrees):
-    return degrees * 5 / 9 + 32
+    return degrees * 9 / 5 + 32
 ```
 
 /// details | good comments   
