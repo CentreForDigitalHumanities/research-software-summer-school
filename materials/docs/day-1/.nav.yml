@@ -1,3 +1,4 @@
 nav:
+  - 0 - A note on Github and VSCode: 0-a-note-on-github-and-vscode.md
   - 1 - git: 1-git
   - 2 - Virtual environments: 2-virtualenv
