@@ -42,13 +42,15 @@ Virtual environment
 ## Exercise: create a virtual environment
 
  - Step 1: Navigate to your `sandbox_NAME` repository.
- - Step 2: Run `python -m venv .env`
- - Step 3: Verify that `.env` has been created in the working directory.
- - Step 4: Activate your virtual environment by running `source .env/bin/activate` (on Linux/MacOS) or `.env/bin/activate` (on Windows)
- - Step 5: Verify that your virtual environment works by checking if `(.env)` has appeared in front of your terminal cursor. 
+ - Step 2: Run `python -m venv .venv`
+ - Step 3: Verify that `.venv` has been created in the working directory.
+ - Step 4: Activate your virtual environment:
+    - Windows: ` .venv\Scripts\activate`
+    - Linux/MacOS: `source .venv/bin/activate`
+ - Step 5: Verify that your virtual environment works by checking if `(.venv)` has appeared in front of your terminal cursor. 
  - Step 6: Run `python` and print 'hello world'.
  - Step 6: Deactivate the virtual environment by running `deactivate`.
- - Step 6: Delete the `.env` folder in your working directory.
+ - Step 6: Delete the `.venv` folder in your working directory.
 
 ## Git and Virtual Environments
 When Git examines your repository, it will also see the files inside your virtual environment and show them in your staging area as having been added to your working directory. However, virtual environments should generally not be committed to version control. Not only are they specific to your machine, they can always be recreated later and often contain thousands of generated files.
@@ -72,8 +74,9 @@ You can use `.gitignore` to exclude files from version control. How do you decid
 
  - Step 1: Re-create your virtual environment.
  - Step 2: Run `git status` and look at the Source Control menu: do you see the .env directory with all its files in the staging area?
+    - Note: On Python 3.13+ you **will not** get new detected files. Create the `.gitignore` anyway.
  - Step 3: Create a `.gitignore` file.
- - Step 4: Add `.env/` to the file and save it.
+ - Step 4: Add `.venv/` to the file and save it.
  - Step 5: Run `git status` and look at the Source Control menu again: what do you notice?
  - Step 6: Commit `.gitignore`.
 
