@@ -97,6 +97,14 @@ Projects evolve over time. New dependencies are added and existing dependencies 
  - Inspect changes using `git diff requirements.txt`
  - Commit the file.
 
+
+## Next steps
+This is the most reproducible, most commonly used way of managing your python dependencies. However, it is somewhat cumbersome, and many developers have created ways to help manage dependencies. While not the focus of this course, it might be worth checking out two other dependency manager systems for later:
+
+1. [Pip-tools](https://pypi.org/project/pip-tools/): A library that helps you automatically update your requirements as your codebase develops. This is the current standard that we use in the Research Software Lab.
+2. [uv]: A library that aims to combine the functionality of `pip`, `venv`, `pip-tools` in a single manager. A lot of python developers are using `uv` these days, as it is very fast and has a good user experience. However, Astral, the company that developed `uv` did just get acquired by OpenAI, so it might become a paid product soon. 
+
+
 ## Works cited:
 https://packaging.python.org/
 https://pip.pypa.io/en/stable/
