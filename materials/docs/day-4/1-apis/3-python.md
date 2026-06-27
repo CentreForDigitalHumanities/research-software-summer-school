@@ -96,5 +96,6 @@ You can copy the code examples above to a new Python file, and modify it.
     type: tip
 
  - Be neat and reproducible! Use functions for repeated code, naming conventions, documentation, etc.
- - Check in the Python file under version control.
+ - Add the Python file you wrote to Git
+    - More bonus: commit and push it to remote
 ///

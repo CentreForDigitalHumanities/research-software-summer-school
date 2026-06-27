@@ -112,6 +112,10 @@ Sometimes, APIs allow the client to supply extra information in a `GET` request.
 
 Parameters are separated by `&`. The API documentation will tell you which parameters are available and what values they accept.
 
+Example: query parameter `min`, with the value `5`. Since `/fat/` is part of the URL, we are now asking for fruit with at least 5g of fat per 100g.
+```
+https://www.fruityvice.com/api/fruit/fat?min=5
+```
 
 ## Exercise: Explore the Fruityvice API
  - Open the [Fruityvice website](https://www.fruityvice.com) and explore its documentation.
