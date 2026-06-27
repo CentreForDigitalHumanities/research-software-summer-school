@@ -131,17 +131,17 @@ One of the most powerful features of Git is the seamless merge of two branches. 
 The best way to showcase this is by creating a merge conflict on purpose. 
 
 ## Exercise: create a merge conflict and resolve it
-Step 1: Go to your sandbox, checkout your `main` branch, and make sure your staging area is empty.
-Step 2: Create a new branch and add one more term to your glossary. Take note of the line number on which you add this new term and then commit the change.
-Step 3: Checkout your main branch again.
-Step 4: Add a term to the glossary on the *same line number* as the term in your other branch. Then commit the change.
-Step 5: Try to merge your feature branch into main.
+ - Step 1: Go to your sandbox, checkout your `main` branch, and make sure your staging area is empty.
+ - Step 2: Create a new branch and add one more term to your glossary. Take note of the line number on which you add this new term and then commit the change.
+ - Step 3: Checkout your main branch again.
+ - Step 4: Add a term to the glossary on the *same line number* as the term in your other branch. Then commit the change.
+ - Step 5: Try to merge your feature branch into main.
 
 Okay, what just happened? Git tried to merge the two branches, but it encountered two changes on the same line in the same file. Therefore, it pauzes the merge and opens the file that contains the merge conflict for you, so that you can make edits in the file until it is in the state that you want it to be after the merge. To help you, Git will add the content of both branches to the file, seperated by `=======`, and bookends them with `<<<<<<< HEAD` before the content in your current file state, and `>>>>>>> feature/your-branch-name` after the content from your feature branch.
 
-Step 6: Fix the conflict: keep the terms you want to keep, remove the rest and the dividers that Git added. VSCode will give you shortcuts to keep one or the other or both, which you can use if you want to.
-Step 7: Save the file. Add it to the staging area again.
-Step 8: Finish the merge by committing the merge commit.
+ - Step 6: Fix the conflict: keep the terms you want to keep, remove the rest and the dividers that Git added. VSCode will give you shortcuts to keep one or the other or both, which you can use if you want to.
+ - Step 7: Save the file. Add it to the staging area again.
+ - Step 8: Finish the merge by committing the merge commit.
 
 ## Works cited:
 https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
