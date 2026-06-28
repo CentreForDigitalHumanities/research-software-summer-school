@@ -40,7 +40,6 @@ Virtual environment
 ///
 
 ## Exercise: create a virtual environment
-
  - Step 1: Navigate to your `sandbox_NAME` repository.
  - Step 2: Run `python -m venv .venv`
  - Step 3: Verify that `.venv` has been created in the working directory.
@@ -51,6 +50,28 @@ Virtual environment
  - Step 6: Run `python` and print 'hello world'.
  - Step 6: Deactivate the virtual environment by running `deactivate`.
  - Step 6: Delete the `.venv` folder in your working directory.
+
+## Virtual Environment in VSCode
+The Python extension for Visual Studio Code allows you to select an *interpreter* for the current project. 
+The interpreter is an instance of Python. By default, the global Python installation is used. It is a good idea to select your new Virtual Environment. This offers some advantages:
+
+- When you run a Python file from the IDE, the virtual environment will be used
+- Code completion and IntelliSense presents options from packages in the virtual environment. E.g. if you have installed `requests` and you start typing `requests.g`, `requests.get()` will be offered as an options.
+
+### Setting the virtual environment
+There are two ways to set the correct interpreter.
+
+1. When you create a new environment, VSCode might detect this, and offer to use it for this project. Click `Yes` and you're all set!
+![newenv](../../assets/venv-newenv.jpg)
+
+2. If you did not get option 1, or ignored it, you can set and change the interpreter at any time:
+    1. Pull up the [Command Palette](https://code.visualstudio.com/docs/editing/userinterface#_command-palette). This is a UI feature of VSCode that allows you to run all sorts of commands. The shortcut is `Ctrl+Shift+P (Windows/Linux)` or `Cmd+Shift+P (MacOS)` 
+    2. Select the `Python: Select Interpreter` command. Start typing to get a list of matching commands.
+    ![select-interpreter](../../assets/venv-interpreter.jpg)
+    3. From the list, select the interpreter that matches `<your_project_directory>/.venv/bin/python`.
+    ![pick-interpreter](../../assets/venv-interpreter2.jpg)
+
+
 
 ## Git and Virtual Environments
 When Git examines your repository, it will also see the files inside your virtual environment and show them in your staging area as having been added to your working directory. However, virtual environments should generally not be committed to version control. Not only are they specific to your machine, they can always be recreated later and often contain thousands of generated files.
