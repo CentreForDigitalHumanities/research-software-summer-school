@@ -1,5 +1,5 @@
 # Documentation and materials
-This directory contains the materials in MarkDown format, and the infrastructure required to generate a static website from them using [mkdocs][mkdocs].
+This directory contains the materials in Markdown format, and the infrastructure required to generate a static website from them using [mkdocs][mkdocs].
 
 ## Installation
 - Install [uv][uv] package and project manager
