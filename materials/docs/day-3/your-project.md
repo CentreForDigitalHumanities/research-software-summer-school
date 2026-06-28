@@ -1,4 +1,4 @@
-## Day 3
+# Your Project
 Today is for discussion and reflection. In the afternoon we will have time to work on your own projects. 
 
 ## How to start organizing your own project
