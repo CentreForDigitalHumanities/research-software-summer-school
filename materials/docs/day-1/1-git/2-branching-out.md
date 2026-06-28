@@ -125,6 +125,23 @@ Don't worry about accidentally deleting an active branch: Git has a security bar
 ///
 ////
 
+## Merge conflicts
+One of the most powerful features of Git is the seamless merge of two branches. However, this seamlessness has limits. Useful limits. The most common circumstance of a merge conflict is if you and someone else have both been working on the *same file* on different branches. Consider this scenario: you have created a new branch. We will call the parent *branch a* and the child *branch b* Git executes merges by going back to the last point in time where the two branches were still the same, i.e. the moment *branch b* was created, and then applying all the commits from *branch b* to *branch a*. If *branch a* has not changed since *branch b* was created from it, there will never be a merge conflict. If *branch a* has continued to have new commits, but those commits only changed files that were not changed on *branch b*, there will never be a merge conflict. However, if *branch b* has commits that change the same file as later commits from *branch a*, merge conflicts might arise, and Git will tell you. 
+
+The best way to showcase this is by creating a merge conflict on purpose. 
+
+## Exercise: create a merge conflict and resolve it
+ - Step 1: Go to your sandbox, checkout your `main` branch, and make sure your staging area is empty.
+ - Step 2: Create a new branch and add one more term to your glossary. Take note of the line number on which you add this new term and then commit the change.
+ - Step 3: Checkout your main branch again.
+ - Step 4: Add a term to the glossary on the *same line number* as the term in your other branch. Then commit the change.
+ - Step 5: Try to merge your feature branch into main.
+
+Okay, what just happened? Git tried to merge the two branches, but it encountered two changes on the same line in the same file. Therefore, it pauzes the merge and opens the file that contains the merge conflict for you, so that you can make edits in the file until it is in the state that you want it to be after the merge. To help you, Git will add the content of both branches to the file, seperated by `=======`, and bookends them with `<<<<<<< HEAD` before the content in your current file state, and `>>>>>>> feature/your-branch-name` after the content from your feature branch.
+
+ - Step 6: Fix the conflict: keep the terms you want to keep, remove the rest and the dividers that Git added. VSCode will give you shortcuts to keep one or the other or both, which you can use if you want to.
+ - Step 7: Save the file. Add it to the staging area again.
+ - Step 8: Finish the merge by committing the merge commit.
 
 ## Works cited:
 https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
