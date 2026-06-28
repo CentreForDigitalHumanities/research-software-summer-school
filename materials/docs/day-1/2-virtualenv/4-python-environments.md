@@ -82,7 +82,7 @@ You can use `.gitignore` to exclude files from version control. How do you decid
 
   ## Next steps
 
- This module should give you a first glimpse of how to set up a virtual environment, but you will learn even more from consulting the [documentation of pyenv](https://docs.python.org/3/library/venv.html), especially the part about [how it actually works](https://docs.python.org/3/library/venv.html#how-venvs-work) can be helpful in developing your understanding of these concepts.
+ This module should give you a first glimpse of how to set up a virtual environment, but you will learn even more from consulting the [documentation of venv](https://docs.python.org/3/library/venv.html), especially the part about [how it actually works](https://docs.python.org/3/library/venv.html#how-venvs-work) can be helpful in developing your understanding of these concepts.
 
 ## Works cited:
 https://docs.python.org/3/library/venv.html
