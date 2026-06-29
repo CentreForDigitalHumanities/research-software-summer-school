@@ -10,3 +10,9 @@ Each day has it's own collaborative Markdown document. In these documents you wi
 - [Monday 29-06-2026](https://edu.nl/gxwvw)
 - [Tuesday 30-06-2026](https://edu.nl/kngyd)
 - Other days available soon!
+
+## Presentation slides
+
+- Day 1
+    - [Git](./assets/slides/day1-git.pdf)
+    - [Virtual environments](./assets/slides/day1-virtualenvs.pdf)
