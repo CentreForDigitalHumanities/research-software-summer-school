@@ -9,6 +9,8 @@ Each day has it's own collaborative Markdown document. In these documents you wi
 
 - [Monday 29-06-2026](https://edu.nl/gxwvw)
 - [Tuesday 30-06-2026](https://edu.nl/kngyd)
+- [Wednesday 01-07-2026](https://edu.nl/g3w66)
+- [Thursday 02-07-2026](https://edu.nl/rfy86)
 - Other days available soon!
 
 ## Presentation slides
