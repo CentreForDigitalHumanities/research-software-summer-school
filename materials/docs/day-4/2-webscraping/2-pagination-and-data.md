@@ -44,7 +44,7 @@ for page in range(1, total_pages + 1):
         url_list.append(item.find('a')['href'])
 ```
 
-/// admonition | Be polite — `time.sleep()` is not optional
+/// details | Be polite — `time.sleep()` is not optional
     type: warning
 
 A room full of laptops requesting a site as fast as possible looks like an
@@ -120,7 +120,7 @@ def extract(path):
     }
 ```
 
-/// admonition | Handle missing elements gracefully
+/// details | Handle missing elements gracefully
     type: tip
 
 Some pages simply lack a field. The little `meta()` helper returns a default

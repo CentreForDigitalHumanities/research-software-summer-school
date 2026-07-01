@@ -47,7 +47,7 @@ Note the package is called `beautifulsoup4`, but you **import** it as `bs4`:
 from bs4 import BeautifulSoup
 ```
 
-/// admonition | Forgetting something?
+/// details | Forgetting something?
     type: warning
 
 Update your requirements file with the new library!
@@ -122,7 +122,7 @@ Two things to notice:
   **attribute**.
 - We select by class (`class_=`), by tag name (`'a'`, `'p'`), or by both.
 
-/// admonition | Scraping is maintenance work
+/// details | Scraping is maintenance work
     type: warning
 
 Your code depends on the site's structure. If PBS renames a class, your

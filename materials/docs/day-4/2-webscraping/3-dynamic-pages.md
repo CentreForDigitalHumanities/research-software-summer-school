@@ -52,7 +52,7 @@ A 30-second check you can do live in the browser:
 
 ## The options, best to last resort
 
-/// admonition | 1. Look for a hidden API (do this first)
+/// details | 1. Look for a hidden API (do this first)
     type: tip
 
 Open **DevTools → Network → Fetch/XHR**, reload the page, and watch. Very
@@ -61,7 +61,7 @@ directly with `requests`. This is the fastest, most stable, and kindest
 approach — no browser needed.
 ///
 
-/// admonition | 2. Look for embedded structured data
+/// details | 2. Look for embedded structured data
     type: tip
 
 Many pages ship their data inside a `<script>` tag as JSON — remember the
@@ -70,7 +70,7 @@ the page source that way, you can grab it with `requests` and never touch a
 browser. Always view-source and look before reaching for Selenium.
 ///
 
-/// admonition | 3. Drive a real browser (Selenium / Playwright)
+/// details | 3. Drive a real browser (Selenium / Playwright)
     type: note
 
 The last resort: automate an actual browser so JavaScript runs, then read
@@ -95,7 +95,7 @@ pip install selenium webdriver-manager
 Selenium drives a real browser (Chrome in these examples), so you need Chrome
 installed on your machine — `webdriver-manager` takes care of the driver.
 
-/// admonition | Forgetting something?
+/// details | Forgetting something?
     type: warning
 
 Update your requirements file with the new libraries!
@@ -161,7 +161,7 @@ driver.find_element(By.XPATH, "//button[@aria-label='Select station Mountain Lak
 driver.find_element(By.XPATH, "//button[contains(normalize-space(), 'Confirm')]").click()
 ```
 
-/// admonition | Select by what a human sees, not by hashed classes
+/// details | Select by what a human sees, not by hashed classes
     type: tip
 
 Visible text (`normalize-space()`) and accessibility labels (`aria-label`)
@@ -205,7 +205,7 @@ Your steps:
    (`ul.nutrition-list li.nutrition-list__item`) — the same parsing you already
    know.
 
-/// admonition | You will have used both moves
+/// details | You will have used both moves
     type: tip
 
 `scrollTo` / `scrollIntoView` to reach content, and `.click()` to trigger
@@ -213,7 +213,7 @@ it. Those two, plus waiting for elements to appear, cover the large majority
 of everyday dynamic-page scraping.
 ///
 
-/// admonition | A cookie banner may be in the way
+/// details | A cookie banner may be in the way
     type: note
 
 If a consent banner covers the page, click its **Accept** button first —
