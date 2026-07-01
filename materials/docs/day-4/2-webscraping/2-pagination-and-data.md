@@ -44,12 +44,12 @@ for page in range(1, total_pages + 1):
         url_list.append(item.find('a')['href'])
 ```
 
-!!! warning "Be polite — `time.sleep()` is not optional"
-    A room full of laptops requesting a site as fast as possible looks like an
-    attack. Pause between requests, identify yourself with a `User-Agent`, and
-    check the site's `robots.txt` and terms of service. Politeness keeps
-    scraping sustainable for everyone.
-
+/// warning | Be polite — `time.sleep()` is not optional
+A room full of laptops requesting a site as fast as possible looks like an
+attack. Pause between requests, identify yourself with a `User-Agent`, and
+check the site's `robots.txt` and terms of service. Politeness keeps
+scraping sustainable for everyone.
+///
 ## Download once, save each page to its own file
 
 Once you have the article URLs, download each page **once** and save it as its
@@ -117,11 +117,11 @@ def extract(path):
     }
 ```
 
-!!! tip "Handle missing elements gracefully"
-    Some pages simply lack a field. The little `meta()` helper returns a default
-    instead of crashing. A single broken page should never kill your whole run —
-    wrap `extract()` in a `try/except` and log the failures.
-
+/// tip | Handle missing elements gracefully
+Some pages simply lack a field. The little `meta()` helper returns a default
+instead of crashing. A single broken page should never kill your whole run —
+wrap `extract()` in a `try/except` and log the failures.
+///
 ## Build and save the dataset
 
 ```python
@@ -146,10 +146,11 @@ with open('data/pbs_articles.csv', 'w', newline='', encoding='utf-8') as f:
     writer.writerows(dataset)
 ```
 
+/// define
 JSON vs CSV
-:   Use **JSON** when your records are nested (lists, dictionaries within a
-    record). Use **CSV** when the data is flat and you want to open it in Excel
-    or load it into pandas. It is common to save both.
+
+- Use **JSON** when your records are nested (lists, dictionaries within a record). Use **CSV** when the data is flat and you want to open it in Excel or load it into pandas. It is common to save both.
+///
 
 ## Exercise: build a recipe dataset from BBC Good Food
 

@@ -21,9 +21,11 @@ Rendering a website is nothing more than your browser making a `GET` request and
 drawing the HTML it gets back. When we scrape, we make that same request from
 Python and read the HTML ourselves — no browser required.
 
+/// define
 HTML
-:   *HyperText Markup Language*: the nested tag structure (`<div>`, `<a>`, `<p>`, …)
-    that describes a web page. BeautifulSoup lets us search this structure.
+
+- *HyperText Markup Language*: the nested tag structure (`<div>`, `<a>`, `<p>`, …) that describes a web page. BeautifulSoup lets us search this structure.
+///
 
 ## The BeautifulSoup library
 
@@ -45,9 +47,9 @@ Note the package is called `beautifulsoup4`, but you **import** it as `bs4`:
 from bs4 import BeautifulSoup
 ```
 
-!!! warning "Forgetting something?"
-    Update your requirements file with the new library!
-
+/// warning | Forgetting something?
+Update your requirements file with the new library!
+///
 ## The example: PBS NewsHour
 
 Throughout parts 1 and 2 we scrape search results from
@@ -77,11 +79,11 @@ soup = BeautifulSoup(res.content, 'html.parser')
 print(soup.find('title').get_text())
 ```
 
-!!! tip "Always check what you got back"
-    Look at `res.status_code` (200 = OK) and `len(res.content)` before parsing.
-    A `403`, a `202`, or a suspiciously tiny response usually means the site
-    did **not** give you the real page.
-
+/// tip | Always check what you got back
+Look at `res.status_code` (200 = OK) and `len(res.content)` before parsing.
+A `403`, a `202`, or a suspiciously tiny response usually means the site
+did **not** give you the real page.
+///
 ## Step 2 — find elements
 
 Using the browser's **Inspect element** tool, we can see that every result
@@ -119,12 +121,12 @@ Two things to notice:
   **attribute**.
 - We select by class (`class_=`), by tag name (`'a'`, `'p'`), or by both.
 
-!!! warning "Scraping is maintenance work"
-    Your code depends on the site's structure. If PBS renames a class, your
-    scraper breaks. That is normal — a scraper is software you maintain, not a
-    one-time script. Prefer stable anchors (like `<meta>` tags, see part 2) when
-    you can.
-
+/// warning | Scraping is maintenance work
+Your code depends on the site's structure. If PBS renames a class, your
+scraper breaks. That is normal — a scraper is software you maintain, not a
+one-time script. Prefer stable anchors (like `<meta>` tags, see part 2) when
+you can.
+///
 ## Exercise: scrape a recipe from BBC Good Food
 
 Now apply the same three steps to a richer, real-world site — a recipe page:
@@ -158,22 +160,23 @@ for li in soup.select('li.method-steps__list-item'):
     steps.append(li.find(class_='editor-content').get_text(strip=True))
 ```
 
-!!! tip "Use `get_text(' ', ...)` for the ingredients"
-    An ingredient's amount and name sit in separate tags. Passing a space to
-    `get_text(' ', strip=True)` keeps them apart — `"2 dried ancho chillies"`
-    instead of `"2dried ancho chillies"`.
-
-!!! tip "Stretch goals if you finish early"
-    - A [collection page](https://www.bbcgoodfood.com/recipes/collection/chilli-recipes)
-      lists many recipes. Find every recipe link on it (they look like
-      `/recipes/<slug>`), scrape each into your dictionary, and you have a
-      **dataset** — exactly the idea of [part 2](2-pagination-and-data.md).
-    - Which recipe has the fewest ingredients?
-
-!!! note "A more robust shortcut exists (for later)"
-    Pages like this *also* embed the whole recipe as machine-readable JSON in a
-    `<script type="application/ld+json">` tag (the
-    [schema.org/Recipe](https://schema.org/Recipe) standard). That can be more
-    stable than parsing HTML, and it becomes really useful in
-    [part 3](3-dynamic-pages.md) — but for this exercise, practise the HTML-tag
-    approach above.
+/// tip | Use `get_text(' ', ...)` for the ingredients
+An ingredient's amount and name sit in separate tags. Passing a space to
+`get_text(' ', strip=True)` keeps them apart — `"2 dried ancho chillies"`
+instead of `"2dried ancho chillies"`.
+///
+/// tip | Stretch goals if you finish early
+- A [collection page](https://www.bbcgoodfood.com/recipes/collection/chilli-recipes)
+  lists many recipes. Find every recipe link on it (they look like
+  `/recipes/<slug>`), scrape each into your dictionary, and you have a
+  **dataset** — exactly the idea of [part 2](2-pagination-and-data.md).
+- Which recipe has the fewest ingredients?
+///
+/// note | A more robust shortcut exists (for later)
+Pages like this *also* embed the whole recipe as machine-readable JSON in a
+`<script type="application/ld+json">` tag (the
+[schema.org/Recipe](https://schema.org/Recipe) standard). That can be more
+stable than parsing HTML, and it becomes really useful in
+[part 3](3-dynamic-pages.md) — but for this exercise, practise the HTML-tag
+approach above.
+///
