@@ -1,6 +1,6 @@
 # APIs
 ## Objectives
-In this module, you will learn:
+In this module2, you will learn:
 
  - What an API is and why it is useful
  - The basics of HTTP
