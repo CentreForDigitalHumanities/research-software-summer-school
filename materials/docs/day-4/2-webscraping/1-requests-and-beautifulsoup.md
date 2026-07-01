@@ -50,6 +50,7 @@ from bs4 import BeautifulSoup
 /// warning | Forgetting something?
 Update your requirements file with the new library!
 ///
+
 ## The example: PBS NewsHour
 
 Throughout parts 1 and 2 we scrape search results from
@@ -79,11 +80,9 @@ soup = BeautifulSoup(res.content, 'html.parser')
 print(soup.find('title').get_text())
 ```
 
-/// tip | Always check what you got back
-Look at `res.status_code` (200 = OK) and `len(res.content)` before parsing.
-A `403`, a `202`, or a suspiciously tiny response usually means the site
-did **not** give you the real page.
-///
+Always glance at `res.status_code` (200 = OK) before parsing — a `403`, a `202`,
+or a suspiciously tiny response usually means you did not get the real page.
+
 ## Step 2 — find elements
 
 Using the browser's **Inspect element** tool, we can see that every result
@@ -127,6 +126,7 @@ scraper breaks. That is normal — a scraper is software you maintain, not a
 one-time script. Prefer stable anchors (like `<meta>` tags, see part 2) when
 you can.
 ///
+
 ## Exercise: scrape a recipe from BBC Good Food
 
 Now apply the same three steps to a richer, real-world site — a recipe page:
@@ -152,6 +152,7 @@ Useful selectors (find them yourself with Inspect element first!):
 ```python
 name = soup.find('h1').get_text().strip()
 
+# get_text(' ', ...) keeps amount and name apart: "2 dried ancho chillies"
 ingredients = [li.get_text(' ', strip=True)
                for li in soup.select('ul.ingredients-list li.ingredients-list__item')]
 
@@ -160,23 +161,12 @@ for li in soup.select('li.method-steps__list-item'):
     steps.append(li.find(class_='editor-content').get_text(strip=True))
 ```
 
-/// tip | Use `get_text(' ', ...)` for the ingredients
-An ingredient's amount and name sit in separate tags. Passing a space to
-`get_text(' ', strip=True)` keeps them apart — `"2 dried ancho chillies"`
-instead of `"2dried ancho chillies"`.
-///
-/// tip | Stretch goals if you finish early
-- A [collection page](https://www.bbcgoodfood.com/recipes/collection/chilli-recipes)
-  lists many recipes. Find every recipe link on it (they look like
-  `/recipes/<slug>`), scrape each into your dictionary, and you have a
-  **dataset** — exactly the idea of [part 2](2-pagination-and-data.md).
-- Which recipe has the fewest ingredients?
-///
-/// note | A more robust shortcut exists (for later)
-Pages like this *also* embed the whole recipe as machine-readable JSON in a
-`<script type="application/ld+json">` tag (the
-[schema.org/Recipe](https://schema.org/Recipe) standard). That can be more
-stable than parsing HTML, and it becomes really useful in
-[part 3](3-dynamic-pages.md) — but for this exercise, practise the HTML-tag
-approach above.
-///
+**Stretch goals (if you finish early):** scrape a whole
+[collection page](https://www.bbcgoodfood.com/recipes/collection/chilli-recipes)
+of recipes into a list of dictionaries — the idea of
+[part 2](2-pagination-and-data.md) — and find which recipe has the fewest
+ingredients.
+
+Sites like this often *also* embed the whole recipe as JSON-LD
+(`<script type="application/ld+json">`), which can be more robust than parsing
+HTML — we come back to that in [part 3](3-dynamic-pages.md).

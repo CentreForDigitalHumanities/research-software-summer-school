@@ -50,6 +50,7 @@ attack. Pause between requests, identify yourself with a `User-Agent`, and
 check the site's `robots.txt` and terms of service. Politeness keeps
 scraping sustainable for everyone.
 ///
+
 ## Download once, save each page to its own file
 
 Once you have the article URLs, download each page **once** and save it as its
@@ -122,6 +123,7 @@ Some pages simply lack a field. The little `meta()` helper returns a default
 instead of crashing. A single broken page should never kill your whole run —
 wrap `extract()` in a `try/except` and log the failures.
 ///
+
 ## Build and save the dataset
 
 ```python

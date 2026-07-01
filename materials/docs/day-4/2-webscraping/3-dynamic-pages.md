@@ -58,17 +58,20 @@ often the page fetches its data from a clean JSON endpoint that you can call
 directly with `requests`. This is the fastest, most stable, and kindest
 approach — no browser needed.
 ///
+
 /// tip | 2. Look for embedded structured data
 Many pages ship their data inside a `<script>` tag as JSON — remember the
 `schema.org/Recipe` JSON-LD from part 1. If the data you want is already in
 the page source that way, you can grab it with `requests` and never touch a
 browser. Always view-source and look before reaching for Selenium.
 ///
+
 /// note | 3. Drive a real browser (Selenium / Playwright)
 The last resort: automate an actual browser so JavaScript runs, then read
 the rendered page. Powerful, but slower, more fragile, and heavier to
 install and maintain.
 ///
+
 ## The Selenium library
 
 [Selenium](https://www.selenium.dev/) automates a real web browser from Python,
@@ -89,6 +92,7 @@ installed on your machine — `webdriver-manager` takes care of the driver.
 /// warning | Forgetting something?
 Update your requirements file with the new libraries!
 ///
+
 ## Selenium demo: scrolling the PBS shows grid
 
 The key insight: Selenium only replaces the *"get the HTML"* step. Once the page
@@ -196,6 +200,7 @@ Your steps:
 it. Those two, plus waiting for elements to appear, cover the large majority
 of everyday dynamic-page scraping.
 ///
+
 /// note | A cookie banner may be in the way
 If a consent banner covers the page, click its **Accept** button first —
 the same technique, a different button:
@@ -204,6 +209,7 @@ wait.until(EC.element_to_be_clickable(
     (By.XPATH, "//button[contains(., 'Accept')]"))).click()
 ```
 ///
+
 ## Wrap-up
 
 You can now: send a request, parse HTML, paginate, build a structured dataset,
