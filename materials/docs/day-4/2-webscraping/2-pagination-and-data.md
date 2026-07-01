@@ -44,7 +44,9 @@ for page in range(1, total_pages + 1):
         url_list.append(item.find('a')['href'])
 ```
 
-/// warning | Be polite — `time.sleep()` is not optional
+/// admonition | Be polite — `time.sleep()` is not optional
+    type: warning
+
 A room full of laptops requesting a site as fast as possible looks like an
 attack. Pause between requests, identify yourself with a `User-Agent`, and
 check the site's `robots.txt` and terms of service. Politeness keeps
@@ -118,7 +120,9 @@ def extract(path):
     }
 ```
 
-/// tip | Handle missing elements gracefully
+/// admonition | Handle missing elements gracefully
+    type: tip
+
 Some pages simply lack a field. The little `meta()` helper returns a default
 instead of crashing. A single broken page should never kill your whole run —
 wrap `extract()` in a `try/except` and log the failures.

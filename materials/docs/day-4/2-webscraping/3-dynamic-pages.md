@@ -52,21 +52,27 @@ A 30-second check you can do live in the browser:
 
 ## The options, best to last resort
 
-/// tip | 1. Look for a hidden API (do this first)
+/// admonition | 1. Look for a hidden API (do this first)
+    type: tip
+
 Open **DevTools → Network → Fetch/XHR**, reload the page, and watch. Very
 often the page fetches its data from a clean JSON endpoint that you can call
 directly with `requests`. This is the fastest, most stable, and kindest
 approach — no browser needed.
 ///
 
-/// tip | 2. Look for embedded structured data
+/// admonition | 2. Look for embedded structured data
+    type: tip
+
 Many pages ship their data inside a `<script>` tag as JSON — remember the
 `schema.org/Recipe` JSON-LD from part 1. If the data you want is already in
 the page source that way, you can grab it with `requests` and never touch a
 browser. Always view-source and look before reaching for Selenium.
 ///
 
-/// note | 3. Drive a real browser (Selenium / Playwright)
+/// admonition | 3. Drive a real browser (Selenium / Playwright)
+    type: note
+
 The last resort: automate an actual browser so JavaScript runs, then read
 the rendered page. Powerful, but slower, more fragile, and heavier to
 install and maintain.
@@ -89,7 +95,9 @@ pip install selenium webdriver-manager
 Selenium drives a real browser (Chrome in these examples), so you need Chrome
 installed on your machine — `webdriver-manager` takes care of the driver.
 
-/// warning | Forgetting something?
+/// admonition | Forgetting something?
+    type: warning
+
 Update your requirements file with the new libraries!
 ///
 
@@ -153,7 +161,9 @@ driver.find_element(By.XPATH, "//button[@aria-label='Select station Mountain Lak
 driver.find_element(By.XPATH, "//button[contains(normalize-space(), 'Confirm')]").click()
 ```
 
-/// tip | Select by what a human sees, not by hashed classes
+/// admonition | Select by what a human sees, not by hashed classes
+    type: tip
+
 Visible text (`normalize-space()`) and accessibility labels (`aria-label`)
 are stable and usually unique. Auto-generated CSS classes are neither — they
 are the first thing to break.
@@ -195,13 +205,17 @@ Your steps:
    (`ul.nutrition-list li.nutrition-list__item`) — the same parsing you already
    know.
 
-/// tip | You will have used both moves
+/// admonition | You will have used both moves
+    type: tip
+
 `scrollTo` / `scrollIntoView` to reach content, and `.click()` to trigger
 it. Those two, plus waiting for elements to appear, cover the large majority
 of everyday dynamic-page scraping.
 ///
 
-/// note | A cookie banner may be in the way
+/// admonition | A cookie banner may be in the way
+    type: note
+
 If a consent banner covers the page, click its **Accept** button first —
 the same technique, a different button:
 ```python

@@ -47,7 +47,9 @@ Note the package is called `beautifulsoup4`, but you **import** it as `bs4`:
 from bs4 import BeautifulSoup
 ```
 
-/// warning | Forgetting something?
+/// admonition | Forgetting something?
+    type: warning
+
 Update your requirements file with the new library!
 ///
 
@@ -120,7 +122,9 @@ Two things to notice:
   **attribute**.
 - We select by class (`class_=`), by tag name (`'a'`, `'p'`), or by both.
 
-/// warning | Scraping is maintenance work
+/// admonition | Scraping is maintenance work
+    type: warning
+
 Your code depends on the site's structure. If PBS renames a class, your
 scraper breaks. That is normal — a scraper is software you maintain, not a
 one-time script. Prefer stable anchors (like `<meta>` tags, see part 2) when
