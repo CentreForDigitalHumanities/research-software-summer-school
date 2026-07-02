@@ -131,46 +131,45 @@ one-time script. Prefer stable anchors (like `<meta>` tags, see part 2) when
 you can.
 ///
 
-## Exercise: scrape a recipe from BBC Good Food
+## Exercise: scrape a list of recipes from BBC Good Food
 
-Now apply the same three steps to a richer, real-world site — a recipe page:
-[Next level chilli con carne](https://www.bbcgoodfood.com/recipes/next-level-chilli-con-carne).
+The demo pulled a **list** of results from one PBS search page. Do the same on a
+recipe site. Open a BBC Good Food search and look at the results in your browser:
+[bbcgoodfood.com/search/recipes?q=chilli](https://www.bbcgoodfood.com/search/recipes?q=chilli).
 
-Build a dictionary describing the recipe with its **name**, a list of
-**ingredients**, the **steps**, how many it **serves**, the **cook time** and
-the **calories**. Everything comes straight from the HTML tags — exactly the
-`find` / `find_all` / `select` skills from the demo.
+Build a **list** where each recipe is a dictionary with a **title** and a
+**url** — exactly the `find` / `find_all` / `select` skills from the demo.
 
-Useful selectors (find them yourself with Inspect element first!):
+Useful selectors (confirm them with Inspect element first!):
 
-- title: the page `<h1>`
-- ingredients: `ul.ingredients-list` → `li.ingredients-list__item`
-- method steps: `li.method-steps__list-item` (the step text is inside a
-  `.editor-content` element; the "step 1" label is a separate heading you can
-  ignore)
-- nutrition: `ul.nutrition-list` → `li.nutrition-list__item` (each reads like
-  `"kcal 463"`, `"fat 24 g"`, …)
-- serves / prep / cook: `.recipe-cook-and-prep-details__item` (these read
-  `"Serves 8"`, `"Prep: 25 mins"`, `"Cook: 3 hrs"`)
+- each recipe card: `article.card`
+- the title inside a card: `h2.heading-4`
+- the link inside a card: the card's `<a>` — its `href` is the recipe URL
 
 ```python
-name = soup.find('h1').get_text().strip()
+import requests
+from bs4 import BeautifulSoup
 
-# get_text(' ', ...) keeps amount and name apart: "2 dried ancho chillies"
-ingredients = [li.get_text(' ', strip=True)
-               for li in soup.select('ul.ingredients-list li.ingredients-list__item')]
+url = 'https://www.bbcgoodfood.com/search/recipes?q=chilli'
+res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+soup = BeautifulSoup(res.content, 'html.parser')
 
-steps = []
-for li in soup.select('li.method-steps__list-item'):
-    steps.append(li.find(class_='editor-content').get_text(strip=True))
+recipes = []
+for card in soup.select('article.card'):
+    title = card.find(class_='heading-4')
+    link = card.find('a', href=True)
+    if title and link:                       # skip cards that aren't recipes
+        recipes.append({
+            'title': title.get_text(strip=True),
+            'url': link['href'],
+        })
+
+for recipe in recipes:
+    print(recipe)
 ```
 
-**Stretch goals (if you finish early):** scrape a whole
-[collection page](https://www.bbcgoodfood.com/recipes/collection/chilli-recipes)
-of recipes into a list of dictionaries — the idea of
-[part 2](2-pagination-and-data.md) — and find which recipe has the fewest
-ingredients.
-
-Sites like this often *also* embed the whole recipe as JSON-LD
-(`<script type="application/ld+json">`), which can be more robust than parsing
-HTML — we come back to that in [part 3](3-dynamic-pages.md).
+**Stretch goals (if you finish early):** add one more field you can see on each
+card (for example the star rating). You will also notice some cards are
+*premium* — how would you keep only the free `/recipes/` links? Collecting
+*every* recipe across all the result pages is the job of
+[part 2](2-pagination-and-data.md).

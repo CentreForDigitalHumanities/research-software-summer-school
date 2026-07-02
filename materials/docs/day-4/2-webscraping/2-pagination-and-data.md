@@ -169,17 +169,25 @@ https://www.bbcgoodfood.com/search/recipes?q=chilli
 
 Your steps:
 
-1. **Paginate.** Pick a dish you like (`curry`, `pasta`, `cake`, `soup`…) and
-   walk the search pages. Take a look at how pagination is handled.
-   There is no page-count widget here, so **stop when a page adds nothing new**:
+1. **Paginate.** In part 1 you scraped one page of recipe cards. Now walk
+   *every* results page by adding `&page=` to the URL
+   (`…/search/recipes?q=chilli&page=2`), collecting each recipe's URL. There is
+   no page-count widget, so **stop when a page adds nothing new**.
 
-2. **Download once, one file each.** Save every recipe into `data/recipes/`,
-   named after its slug (`.../butternut-chilli` → `butternut-chilli.html`).
+2. **Download once, one file each.** Visit every recipe URL and save the page
+   into `data/recipes/`, named after its slug
+   (`.../butternut-chilli` → `butternut-chilli.html`).
 
-3. **Extract with a function.** Reuse your part 1 recipe selectors
-   (`h1`, `ul.ingredients-list li.ingredients-list__item`,
-   `li.method-steps__list-item`, the nutrition and serves/cook items) inside an
-   `extract(path)` function, and run it over the folder.
+3. **Extract with a function.** Now open each saved recipe page and pull the
+   details out with an `extract(path)` function. Useful selectors on a recipe
+   page (find them with Inspect element):
+    - title: `h1`
+    - ingredients: `ul.ingredients-list li.ingredients-list__item`
+    - method steps: `li.method-steps__list-item` (text is in `.editor-content`)
+    - nutrition: `ul.nutrition-list li.nutrition-list__item`
+    - serves / cook: `.recipe-cook-and-prep-details__item`
+
+    Run it over the folder to build a list of dictionaries.
 
 4. **Save + analyse.** Write the dataset to JSON, then answer: **which recipe
    has the most ingredients? The fewest calories?**
