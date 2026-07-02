@@ -18,3 +18,7 @@ Each day has it's own collaborative Markdown document. In these documents you wi
 - Day 1
     - [Git](./assets/slides/day1-git.pdf)
     - [Virtual environments](./assets/slides/day1-virtualenvs.pdf)
+
+- Day 3
+    - [Tool criticism for Humanities by Dr. Karin van Es](./assets/slides/tool-criticism.pdf)
+    - [Investigative data journalism by Joris Veerbeek](./assets/slides/data_groene_summer_school.pdf)
