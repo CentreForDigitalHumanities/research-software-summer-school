@@ -1,6 +1,6 @@
 # Scraping part 2: pagination and building a dataset
 
-*By [Erik Hekman](mailto:erik.hekman@hu.nl)*
+*By [Erik Hekman](https://www.linkedin.com/in/erikhekman/)*
 
 ## Objectives
 

@@ -1,6 +1,6 @@
 # Scraping part 1: requests and BeautifulSoup
 
-*By [Erik Hekman](mailto:erik.hekman@hu.nl)*
+*By [Erik Hekman](https://www.linkedin.com/in/erikhekman/)*
 
 ## Objectives
 

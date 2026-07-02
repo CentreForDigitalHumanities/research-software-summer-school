@@ -1,6 +1,6 @@
 # Scraping part 3: dynamic pages and vibe coding
 
-*By [Erik Hekman](mailto:erik.hekman@hu.nl)*
+*By [Erik Hekman](https://www.linkedin.com/in/erikhekman/)*
 
 ## Objectives
 
